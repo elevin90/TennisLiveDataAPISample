@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,8 @@
 		606221F02519FDF200653A82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 606221EE2519FDF200653A82 /* LaunchScreen.storyboard */; };
 		606221FB2519FDF200653A82 /* TennisLiveDataAPISampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606221FA2519FDF200653A82 /* TennisLiveDataAPISampleTests.swift */; };
 		606222062519FDF300653A82 /* TennisLiveDataAPISampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606222052519FDF300653A82 /* TennisLiveDataAPISampleUITests.swift */; };
+		60622218251A007700653A82 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 60622217251A007700653A82 /* PromiseKit */; };
+		6062221E251A1DDE00653A82 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 6062221D251A1DDE00653A82 /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6062221E251A1DDE00653A82 /* SDWebImage in Frameworks */,
+				60622218251A007700653A82 /* PromiseKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +85,8 @@
 		606221D42519FDF100653A82 = {
 			isa = PBXGroup;
 			children = (
+				6062222B251A1E6300653A82 /* Models */,
+				60622222251A1E2300653A82 /* Services */,
 				606221DF2519FDF100653A82 /* TennisLiveDataAPISample */,
 				606221F92519FDF200653A82 /* TennisLiveDataAPISampleTests */,
 				606222042519FDF300653A82 /* TennisLiveDataAPISampleUITests */,
@@ -131,6 +137,20 @@
 			path = TennisLiveDataAPISampleUITests;
 			sourceTree = "<group>";
 		};
+		60622222251A1E2300653A82 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		6062222B251A1E6300653A82 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,6 +167,10 @@
 			dependencies = (
 			);
 			name = TennisLiveDataAPISample;
+			packageProductDependencies = (
+				60622217251A007700653A82 /* PromiseKit */,
+				6062221D251A1DDE00653A82 /* SDWebImage */,
+			);
 			productName = TennisLiveDataAPISample;
 			productReference = 606221DD2519FDF100653A82 /* TennisLiveDataAPISample.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +242,10 @@
 				Base,
 			);
 			mainGroup = 606221D42519FDF100653A82;
+			packageReferences = (
+				60622216251A007700653A82 /* XCRemoteSwiftPackageReference "PromiseKit" */,
+				6062221C251A1DDE00653A82 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 606221DE2519FDF100653A82 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -597,6 +625,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		60622216251A007700653A82 /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mxcl/PromiseKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.13.3;
+			};
+		};
+		6062221C251A1DDE00653A82 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		60622217251A007700653A82 /* PromiseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 60622216251A007700653A82 /* XCRemoteSwiftPackageReference "PromiseKit" */;
+			productName = PromiseKit;
+		};
+		6062221D251A1DDE00653A82 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6062221C251A1DDE00653A82 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		606221E92519FDF100653A82 /* TennisLiveDataAPISample.xcdatamodeld */ = {
